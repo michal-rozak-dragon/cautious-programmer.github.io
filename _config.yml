@@ -1,8 +1,8 @@
 theme: jekyll-theme-hacker
 
+title: cautious-programmer
 
-# Name of website
-title: My website
+description: I know that I know nothing
 
-# Short description of your site
-description: A virtual proof that I'm awesome
+navbar-links:
+  About Me: "aboutme"
