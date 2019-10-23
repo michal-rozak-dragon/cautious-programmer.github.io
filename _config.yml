@@ -3,6 +3,3 @@ theme: jekyll-theme-hacker
 title: cautious-programmer
 
 description: I know that I know nothing
-
-navbar-links:
-  About Me: "aboutme"
