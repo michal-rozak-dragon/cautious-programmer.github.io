@@ -4,7 +4,7 @@ Hi. My name is Michał. I am passionate Java Developer eager to constantly expan
 
 In this blog, I am going post and explain variety of Java (and not only) interview questions.
 
-## 1 What is the best way to implement Singleton pattern in Java?
+## 1. What is the best way to implement Singleton pattern in Java?
 
 The best way to implement Singleton pattern in Java is to use `Enum`. 
 
@@ -21,3 +21,35 @@ public enum SingletonExample { INSTANCE }
 
 ### Cons:
 * does not support lazy initialization
+
+More real-life example:
+
+```java
+
+public enum ObjectMapperSingleton {
+
+  INSTANCE;
+
+  private ObjectMapper objectMapper;
+
+  ObjectMapperSingleton() {
+    objectMapper = new ObjectMapper();
+  }
+
+  public ObjectMapper get() {
+    return objectMapper;
+  }
+
+  public static void main(String[] args) {
+
+    ObjectMapper firstObjectMapper = ObjectMapperSingleton.INSTANCE.get();
+    ObjectMapper secondObjectMapper = ObjectMapperSingleton.INSTANCE.get();
+
+    System.out.println(firstObjectMapper == secondObjectMapper);
+  }
+}
+
+```
+
+Note that only creation of `ObjectMapperSingleton` object is thread-safe. Thread-safety of exposed methods, has to 
+be handled explicitly by the developer. 
