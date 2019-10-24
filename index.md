@@ -32,16 +32,12 @@ public enum ObjectMapperSingleton {
 
   private ObjectMapper objectMapper;
 
-  ObjectMapperSingleton() {
-    objectMapper = new ObjectMapper();
-  }
+  ObjectMapperSingleton() { objectMapper = new ObjectMapper(); }
 
-  public ObjectMapper get() {
-    return objectMapper;
-  }
+  public ObjectMapper get() { return objectMapper; }
 }
 
 ```
 
-Note that only creation of `ObjectMapperSingleton` object is thread-safe. Thread-safety of exposed methods, has to 
+Note that only creation of `ObjectMapperSingleton` object is thread-safe. Thread-safety of exposed methods has to 
 be handled explicitly by the developer. 
