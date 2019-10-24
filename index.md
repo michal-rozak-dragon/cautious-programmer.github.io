@@ -39,14 +39,6 @@ public enum ObjectMapperSingleton {
   public ObjectMapper get() {
     return objectMapper;
   }
-
-  public static void main(String[] args) {
-
-    ObjectMapper firstObjectMapper = ObjectMapperSingleton.INSTANCE.get();
-    ObjectMapper secondObjectMapper = ObjectMapperSingleton.INSTANCE.get();
-
-    System.out.println(firstObjectMapper == secondObjectMapper);
-  }
 }
 
 ```
